@@ -51,6 +51,8 @@ if uploaded:
             st.session_state["esef_df"] = df
             st.session_state["esef_meta"] = meta
             st.session_state["esef_filename"] = uploaded.name
+            st.session_state["esef_file_bytes"] = file_bytes
+            st.session_state["esef_file_ext"] = file_ext
             st.success(f"✅ Loaded **{len(df):,}** facts from **{uploaded.name}**")
             with st.expander("Processing log"):
                 for line in logs:
